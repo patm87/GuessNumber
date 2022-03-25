@@ -72,10 +72,10 @@ const game = (() => {
 
     const getTextAlert = () => {
         if (tries == 1) {
-            return 'Wizard won in 1 try!'
+            return 'Wizard guessed in 1 try!'
         }
         else if (tries <= triesMaxNeeded) {
-            return 'Wizard won in ' + tries + ' tries!'
+            return 'Wizard guessed in ' + tries + ' tries!'
         }
         else {
             return "You cheated me!";
