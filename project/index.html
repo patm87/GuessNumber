@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="game--container">
+        <div class="game--wizard">
+            <img src="wizard.png" />
+            <h1 id="team2">Team 2 will find your nmbr !</h1>
+            <p class="tries--count ds-none"></p>
+            <div class="wizard-bet"></div>
+        </div>
+        <div class="game--inputs">
+            <div class="game--range">
+                <font size="5" style="margin-right: 5px;">Think of a number between</font>
+                <input type="number" readonly value="0">
+                <font size="5" style="margin-left: 5px;">and</font>
+                <input type="number" id="maxnumber" placeholder="max" min="1" />
+                <button onclick="game.getMaxNumber()" class="btn--cta">Let's play</button>
+            </div>
+            <div class="bet--validation ds-none">
+                <input type="text" id="betnumber" readonly value>
+                <div class="help--buttons">
+                    <div onclick="game.fixGuess('lower')">Lower</div>
+                    <div onclick="game.reset()">That's it!</div>
+                    <div onclick="game.fixGuess('higher')">Higher</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+    <script src="game.js"></script>
+</html>
